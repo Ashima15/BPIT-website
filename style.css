@@ -1,5 +1,13 @@
+*{
+    box-sizing: border-box;
+}
 body{
-    padding: 20px;
+    padding: 10px;
+    background: rgb(62, 29, 82) !important;
+}
+.pages{
+    min-height:80vh;
+    background: white;
 }
 
 .functions{
@@ -71,7 +79,7 @@ header{
   margin-left: 10px;
   font-size: 40px;
   font-weight: 800;
-  font-family: serif;
+  font-family: sans-serif;
   color: #865acf;
 }
 .logotype-full{
@@ -123,17 +131,21 @@ nav{
   padding: 5px;
   cursor: pointer;
 }
+/*
 .drop-item:hover{
   background: #30122d;
   color: #fff;
 }
+*/
+
 marquee{
   font-size: 12px;
   background: #cb2d3e;
   color: #fff;
   padding: 5px;
   box-sizing: border-box;
-  border-radius: 20px;
+/*  border-radius: 20px;*/
+  margin-top: -13px;
 }
 
 .head-content{
@@ -146,14 +158,18 @@ marquee{
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
     margin-top: 0px;
+    height: 60vh;
 }
 
 .intro-content{
-  color: #fff;
-  width: 60%;
+/*    display: none;*/
+    color: #fff;
+    width: 60%;
+    position: absolute;
+    top: 50%;
 }
-.intro-content>h2{
-  font-size: 50px;
+.intro-heading{
+  font-size: 45px;
 }
 
 /*
@@ -223,9 +239,6 @@ marquee{
   padding: 10px;
   border-radius: 5px;
 }
-.notices>h2{
-  color: #cb2d3e;
-}
 
 .footer{
   position: relative;
@@ -249,17 +262,19 @@ marquee{
   padding: 0px;
 }
 
+/*
 a:hover{
   border-radius: 6px;
   background-color: #cb2d3e !important;
 }
+*/
 
-.nav .open>a, .nav .open>a:focus, .nav .open>a:hover {
+.nav .open>a, .nav .open>a:focus, .nav .open>a:hover,.nav>li>a:focus, .nav>li>a:hover  {
     background-color: #cb2d3e !important;
     border-color: #337ab7;
     border-radius: 6px;
+    
 }
-
 .topnavbar{
   background-color: #30122d;
   background-image: url("http://www.bpitindia.com/images/bpit1.jpg");
@@ -290,23 +305,29 @@ a:hover{
 
 .writtenpart{
     padding: 10px;
+    text-align: justify;
 }
 
 .headingsh4{
-    color: #5e245a;
-    font-family: 'Arvo', serif;
+    color: #fff;
+/*    font-familfont-family: 'Arvo', sans-serif;*/
+    font-family:sans-serif;
     font-weight: bold;
     font-size: 22px;
+    background: #5e245a;
+    padding: 20px;
 }
 
 .headingsh2{
     color : #cb2d3e;
-    font-family: 'Pacifico', cursive;
+    font-family: monospace;
+/*    font-family: 'Pacifico', cursive;*/
 }
 
 p{
-    font-family: 'Kite One', sans-serif;
+/*    font-family: 'Kite One', sans-sans-serif;*/
     font-size: 15px;
+    font-family: sans-serif;
 }
 
 .names{
@@ -349,4 +370,168 @@ p{
 .departmentNavs{
     font-size: 22px;
     color: #5e245a;
+}
+@media(max-width:800px){
+    .logotype-full{
+        display: none;
+    }
+        .intro-description p{
+        font-size: 80% ;
+    }
+    
+    .intro-content{
+        width: 80%;
+    }
+}
+.learn-button{
+    background:#cb2d3e;
+    width: 95px;
+    padding: 8px;
+    border-radius: 6px;
+}
+
+@media(max-width:470px){
+    .intro-description p{
+        font-size:0;
+    }
+    .mgmt-image{
+        width: 200px;
+        margin:auto;
+        display: block;
+    }
+    .chairman,.principal{
+        width:200px;
+        margin:auto;
+    }
+
+}
+
+.events,.news,.notices{
+    box-shadow: 0px 0px 0px #c7c1c1, 0px 0px 0px #c7c1c1, -1px 1px 14px #c7c1c1;
+    float: left;
+}
+.events:hover{
+        box-shadow: -1px 0px 10px #cacaca, -1px 1px 3px #cecece, 9px 6px 21px #e2e2e2;
+}
+.mySlides{
+    width: 300px;
+    margin: auto;
+}
+
+.others-heading{
+    text-align: center;
+    color: #cb2d3e;
+}
+@media(max-width:968px){
+    .mySlides{
+    width: 200px;
+    margin: auto;
+}
+    .mgmt-image{
+        width: 300px;
+        margin:auto;
+        display: block;
+    }
+}
+@media(max-width:643px){
+        .image2,.image3{
+        display: none;
+    }
+    .image1{
+        margin:auto 10%;
+/*        display: block;*/
+        width: 80% !important;
+        
+    }
+}
+.trust-block{
+    margin: 1% 3% !important;
+    background: #f9e3f7;
+    padding: 2%;
+    border-radius: 20px;
+}
+
+.trust-block1{
+        background: #f9e3f7;
+/*    border-radius: 20px;*/
+/*    min-height: 350px;*/
+    
+}
+
+.trust-block-body{
+    margin-top: 20px;
+    margin-left: 3%;
+    min-height: 300px;
+}
+.principal,.chairman{
+    display: block;
+    margin: auto;
+}
+
+/*
+@media screen and (max-width: 900px) {
+    .card{
+        width: 29%;
+        padding: 20px;
+    }
+}
+
+@media screen and (max-width: 479px) {
+     .card{
+         width: 100%;
+     }
+}
+*/
+.card{
+    margin: 3% 1% 0% 2%;
+    padding:  2% 4% ;
+    width: 100%;
+    /* border:2px groove rgba(74, 76, 71, 0.35); */
+    /* box-shadow: 0px 2px 5px #c7c1c1, -2px 4px 5px #c7c1c1, 10px 8px 15px #c7c1c1;*/
+    box-shadow: 0px 0px 0px #c7c1c1, 0px 0px 0px #c7c1c1, -1px 1px 14px #c7c1c1;
+    float: left;
+    font-family: sans-serif;
+    font-weight: 200;
+    font-size: 15px;
+    text-align: center;
+    
+}
+.card:hover{
+         /* box-shadow: 0px 2px 2px #c7c1c1, -2px 3px 3px #cec7c7, 15px 7px 15px #c7c1c1; */
+         box-shadow: -1px 0px 10px #cacaca, -1px 1px 3px #cecece, 9px 6px 21px #e2e2e2;;
+}
+.team-image{
+    border-radius: 100%;
+}
+hr.style-line {
+  border: 0; 
+  height: 1px; 
+  background-image: -webkit-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+  background-image: -moz-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+  background-image: -ms-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+  background-image: -o-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0); 
+}
+i{
+    font-size: 30px;
+}
+.role{
+    color: grey;
+    font-size: 15px;
+    
+}
+
+.coloumn-middle{
+    height: 80px;
+}
+
+.coloumn-middle:before{
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  height: 100%;
+}
+
+.align-middle{
+      display: inline-block;
+  vertical-align: middle;
 }
